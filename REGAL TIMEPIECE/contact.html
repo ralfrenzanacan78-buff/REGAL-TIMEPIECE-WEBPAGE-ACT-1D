@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal Timepiece - Contact Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #4682b4; /* Dark blue-gray background */
+            color: #ecf0f1; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        /* Global Styles (copied for consistency across pages) */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #e67e22;
+        }
+
+        a:hover {
+            color: #d35400;
+        }
+
+        /* Header (copied for consistency across pages) */
+        header {
+            background: #34495e;
+            color: #ffffff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #e67e22 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+            font-size: 2.5em;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        /* Contact Specific Styles */
+        .contact-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('rolex-history-2000-2013-fallback_bg.avif') no-repeat center center/cover; /* Contact header image */
+            color: #ffffff;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .contact-header h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .contact-header p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-content {
+            padding: 40px 20px;
+            background: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .contact-info, .contact-form-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px; /* Limit width to keep form manageable */
+            padding: 20px;
+            background: #2c3e50;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info h3, .contact-form-container h3 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .contact-info p strong {
+            color: #ecf0f1;
+        }
+        .contact-info .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .contact-info a {
+            display: block; /* Make links block level for better spacing */
+            margin-bottom: 10px;
+            color: #ecf0f1; /* White links for contact info */
+        }
+        .contact-info a:hover {
+            color: #e67e22;
+        }
+
+        /* Form Styles */
+        .contact-form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form-container label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ecf0f1;
+            text-align: left; /* Align labels to the left */
+        }
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #4a637f;
+            border-radius: 5px;
+            background-color: #34495e;
+            color: #ecf0f1;
+            font-size: 1em;
+        }
+        .contact-form-container textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form-container input[type="submit"] {
+            background: #e67e22;
+            color: #ffffff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .contact-form-container input[type="submit"]:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Map Embed */
+        .map-container {
+            flex-basis: 100%; /* Take full width */
+            margin-top: 30px;
+            background: #2c3e50;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .map-container h3 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Footer (copied for consistency across pages) */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+            border-top: #e67e22 3px solid;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Regal Timepiece</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-header">
+        <h2>Get In Touch</h2>
+        <p>We're here to help! Whether you have a question about our products, an order, or anything else, our team is ready to assist you.</p>
+    </section>
+
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><span class="icon">📍</span><strong>Our Location:</strong> 123 Timeless Ave, Horology City, PH 1000</p>
+                <p><span class="icon">📧</span><strong>Email Us:</strong> <a href="mailto:info@regaltimepiece.com">info@regaltimepiece.com</a></p>
+                <p><span class="icon">📞</span><strong>Call Us:</strong> <a href="tel:+639XX XXX XXXX">+63 9XX XXX XXXX</a></p>
+                <p><span class="icon">⏰</span><strong>Business Hours:</strong> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p style="margin-top: 25px;">Feel free to reach out to us during business hours, or send us a message anytime!</p>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send Us a Message</h3>
+                <form action="#" method="POST"> <!-- action="#" means the form won't submit anywhere for now -->
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <div class="map-container">
+                <h3>Find Us on the Map</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.042738981607!2d120.98188121481177!3d14.60421898980838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9b0e12d4d89%3A0x6b4c1e4c3a1e4c3a!2sNational%20Museum%20of%20Fine%20Arts!5e0!3m2!1sen!2sph!4v1678886400000!5m2!1sen!2sph" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p style="margin-top: 15px; font-size: 0.9em;">Visit us during our business hours for a personalized watch consultation.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Regal Timepiece. All rights reserved.</p>
+        <p>Email: info@regaltimepiece.com | Phone: +63 994 456 8686</p>
+        <p>Follow us on <a href="#" style="color: #e67e22;">Instagram</a> and <a href="#" style="color: #e67e22;">Facebook</a></p>
+    </footer>
+
+</body>
+</html>

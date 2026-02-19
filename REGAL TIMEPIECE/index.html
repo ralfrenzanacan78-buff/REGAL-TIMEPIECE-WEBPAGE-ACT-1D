@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal Timepiece - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:#4682b4 ; /* Dark blue-gray background */
+            color: #ecf0f1; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        /* Global Styles */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #e67e22;
+        }
+
+        a:hover {
+            color: #d35400;
+        }
+
+        /* Header */
+        header {
+            background: #34495e; /* Slightly darker header */
+            color: #ffffff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #e67e22 3px solid; /* Orange accent */
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+            font-size: 2.5em;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #e67e22; /* Orange on hover */
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 500px; /* Increased height for impact */
+            background: url("images/rolex-history-2000-2013-fallback_bg.avif") no-repeat center center/cover; /* Placeholder hero image */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: -1;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 4em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            color: #ffffff;
+            background: #e67e22; /* Orange button */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .button:hover {
+            background: #d35400; /* Darker orange on hover */
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 40px 20px; /* Increased padding */
+            margin: 30px 0; /* Increased margin */
+            background: #34495e; /* Section background color */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* More prominent shadow */
+        }
+        .section h3 {
+            color: #e67e22;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        .section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted grid for better look */
+            gap: 30px; /* Increased gap */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .product-item {
+            background: #2c3e50;
+            padding: 20px; /* Increased padding */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4); /* Deeper shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: 200px; /* Fixed height for product images */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #4a637f; /* Subtle border for images */
+        }
+        .product-item h4 {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        .product-item p {
+            font-size: 1em;
+            color: #bdc3c7;
+        }
+        .product-item .button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px; /* Increased padding */
+            background: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+            border-top: #e67e22 3px solid;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Regal Timepiece</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Timeless Elegance, Crafted for You</h2>
+            <p>Discover a curated collection of exquisite watches that blend classic sophistication with modern craftsmanship. Each piece tells a story of precision and style.</p>
+            <a href="shop.html" class="button">Explore Our Collection</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section">
+            <h3>Featured Timepieces</h3>
+            <p style="text-align: center;">Explore some of our most beloved and unique watches, hand-picked for their exceptional quality and design.</p>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/Rolex GMT-Master II 126710 pepsi.avif" alt="GMT-Master II">
+                    <h4>Rolex GMT-Master II "Pepsi"</h4>
+                    <p>resembles the soft drink's logo but also allows for tracking multiple time zones.</p>
+                    <a href="shop.html#Cosmograph" class="button">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/Datejust 41 Wimbledon.avif" alt="Wimbledon">
+                    <h4>Datejust 41 "Wimbledon"</h4>
+                    <p>Elegant, sporty Rolex; Wimbledon dial with green Roman numerals; iconic design.</p>
+                    <a href="shop.html#minimalist" class="button">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/Submariner black 2.avif" alt="Submariner black">
+                    <h4>Submariner</h4>
+                    <p>A robust, waterproof watch; timeless design, perfect for diving and everyday wear.</p>
+                    <a href="shop.html#diver" class="button">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/Everose gold lady-dayjust.avif" alt="Lady-Datejust diamond gold">
+                    <h4>Lady-Datejust</h4>
+                    <p>Elegant, classic Rolex; smaller size, timeless design, versatile, and feminine appeal.</p>
+                    <a href="shop.html#pocketwatch" class="button">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>Our Passion for Horology</h3>
+            <p>At Regal Timepiece, we are more than just a store; we are enthusiasts dedicated to the art and science of timekeeping. Every watch in our collection is carefully selected, ensuring it meets our high standards of craftsmanship, durability, and aesthetic appeal. We believe a watch is not just an instrument, but a reflection of one's personality and a companion through life's most memorable moments.</p>
+            <p>Our mission is to make exceptional timepieces accessible, allowing our customers to own a piece of horological history and enjoy the unparalleled feeling of wearing a truly special watch.</p>
+            <p style="text-align: center; margin-top: 30px;"><a href="about.html" class="button">Learn More About Us</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Regal Timepiece. All rights reserved.</p>
+        <p>Email: info@regaltimepiece.com | Phone: +63 998 546 123</p>
+        <p>Follow us on <a href="#" style="color: #e67e22;">Instagram</a> and <a href="#" style="color: #e67e22;">Facebook</a></p>
+    </footer>
+
+</body>
+</html>

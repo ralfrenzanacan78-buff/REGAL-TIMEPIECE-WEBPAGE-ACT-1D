@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal Timepiece - Shop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #4682b4; /* Dark blue-gray background */
+            color: #ecf0f1; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        /* Global Styles (copied for consistency across pages) */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #e67e22;
+        }
+
+        a:hover {
+            color: #d35400;
+        }
+
+        /* Header (copied for consistency across pages) */
+        header {
+            background: #34495e;
+            color: #ffffff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #e67e22 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+            font-size: 2.5em;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        /* Shop Specific Styles */
+        .shop-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x300/1a2a3a/ffffff?text=Our+Collection') no-repeat center center/cover; /* Shop header image */
+            color: #ffffff;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .shop-header h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .shop-header p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .product-listing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .product-card {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #4a637f;
+        }
+        .product-card h3 {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+        .product-card p {
+            font-size: 1em;
+            color: #bdc3c7;
+            margin-bottom: 15px;
+        }
+        .product-card .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e67e22;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .product-card .button {
+            display: inline-block;
+            color: #ffffff;
+            background: #e67e22;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .product-card .button:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Footer (copied for consistency across pages) */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+            border-top: #e67e22 3px solid;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Regal Timepiece</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="shop-header">
+        <h2>Our Exquisite Collection</h2>
+        <p>Browse through our hand-picked selection of watches, each a masterpiece of engineering and design.</p>
+    </section>
+
+    <div class="container">
+        <div class="product-listing">
+            <!-- Product 1 -->
+            <div class="product-card" id="chronograph">
+                <img src="images/Rolex GMT-Master II 126710 pepsi.avif" alt="GMT-Master II">
+                <h3>Rolex GMT-Master II "Pepsi" Oyster, 40 mm, white gold Reference <mark style="color: rgb(0, 0, 0);"> 126719BLRO </mark></h3>
+                <p>The Rolex GMT-Master II "Pepsi" is famed for its iconic red and blue 24-hour bezel, instantly recognizable and highly functional for tracking up to three time zones by distinguishing day and night hours. Its modern version not only retains this classic aesthetic.</p>
+                <span class="price">PHP 2,991,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" id="minimalist">
+                <img src="images/Datejust 41 Wimbledon.avif" alt="Wimbledon">
+                <h3> Datejust 41 "Wimbledon" Oyster, 41 mm, Oystersteel and Everose gold
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126331 </mark>
+                </h3>
+                <p>The Rolex Datejust 41 Wimbledon is a distinguished timepiece that blends sporty elegance with classic Rolex design. It's known for its unique "Wimbledon" dial, robust construction, and precision movement.</p>
+                <span class="price">PHP 1,046,500</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" id="diver">
+                <img src="images/Submariner black 2.avif" alt="Submariner">
+                <h3>Submariner
+                    Oyster, 41 mm, Oystersteel 
+                    Reference 
+                    <mark style="color: rgb(0, 0, 0);"> 124060 </mark> 
+                </h3>
+                <p>The iconic Submariner: Unrivaled robustness, 200m water resistance, and timeless appeal for global enthusiasts. Its unidirectional bezel ensures precise dive-timing, enhancing safety. With unwavering reliability and a durable build, this adventurous dive watch is perfect for daily wear and underwater exploration.</p>
+                <span class="price">PHP 595,000 </span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" id="pocketwatch">
+                <img src="images/Everose gold lady-dayjust.avif" alt="Lady-Datejust diamond gold">
+                <h3>Lady-Datejust
+                    Oyster, 28 mm, Everose gold and diamonds 
+                    Reference <mark style="color: rgb(0, 0, 0);"> 279135RBR </mark> 
+                </h3>
+                <p>The Rolex Lady-Datejust is a classic women's timepiece, blending elegance and functionality in a smaller, refined design. Its timeless aesthetic makes it a versatile accessory, suitable for both everyday wear and special occasions.</p>
+                <span class="price">PHP 3,056,000 </span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="images/Submariner Date blue gold.avif" alt="blue Gold Watch">
+                <h3>Submariner Date
+                    Oyster, 41 mm, Oystersteel and yellow gold 
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126613LB </mark>
+                </h3>
+                <p>The Rolex Submariner Date in blue and gold is a luxurious take on the classic dive watch, blending robust functionality with opulent materials. Its striking blue dial and bezel, paired with the warmth of gold, create a visually stunning timepiece.</p>
+                <span class="price">₱1,118,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="images/Lady-Datejust diamond gold.avif" alt="Lady-Datejust">
+                <h3>Lady-Datejust
+                    Oyster, 28 mm, Oystersteel and yellow gold
+                    Reference <mark style="color: rgb(0, 0, 0);"> 279163 </mark>
+                </h3>
+                <p>The Rolex Lady-Datejust in yellow gold is the epitome of timeless elegance and precision, designed for the discerning woman. Its radiant yellow gold case and bracelet exude luxury, while the iconic Datejust design ensures enduring style.</p>
+                <span class="price">PHP 741,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="images/GMT-Master II batman.avif" alt="batman">
+                <h3>GMT-Master II "batman" 
+                    Oyster, 40 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126710BLNR </mark>
+                </h3>
+                <p>The Rolex GMT-Master II "Batman" is celebrated for its striking black and blue Cerachrom bezel, which earned it the "Batman" nickname . This two-tone bezel, made from Rolex's patented ceramic, is not only visually distinctive but also highly scratch-resistant and corrosion-resistant.</p>
+                <span class="price">PHP 695,500</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="images/Oyster Perpetual 28.avif" alt="Perpetual">
+                <h3>Oyster Perpetual 28
+                    Oyster, 28 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 276200 </mark>
+                </h3>
+                <p>The Rolex Oyster Perpetual 28 is a classic and elegant timepiece, known for its simplicity and timeless design. As a direct descendant of the original Oyster launched in 1926, it embodies Rolex's foundational principles of chronometric precision, waterproofness, and self-winding functionality.</p>
+                <span class="price">PHP 364,500</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="product-card">
+                <img src="images/Oystersteel dayjust 41.avif" alt="Oystersteel">
+                <h3>Oyster Perpetual 31
+                    Oyster, 31 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 277200 </mark>
+                </h3>
+                <p>The Rolex Oyster Perpetual 31 is a classic and elegant timepiece celebrated for its understated design, exceptional precision, and unwavering reliability. As a direct descendant of the original Rolex Oyster, the world's first waterproof wristwatch, it embodies the core attributes of the Oyster Perpetual collection: chronometric precision certified by COSC, a robust and waterproof Oyster case, and the convenience of self-winding via a Perpetual rotor.</p>
+                <span class="price">PHP 371,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <img src="images/Explorer II.avif" alt="Explorer">
+                <h3>Explorer II
+                    Oyster, 42 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 226570 </mark>
+                </h3>
+                <p>The Rolex Explorer II is a rugged and dependable timepiece engineered for explorers and adventurers navigating challenging environments where distinguishing day from night is crucial.facilitated by an additional arrow-tipped hand that complements the traditional hour, minute, and seconds hands. This hand works in conjunction with a fixed, graduated 24-hour bezel, enabling the wearer to easily track a second time zone or confirm AM/PM hours in disorienting conditions like caves or polar regions.</p>
+                <span class="price">PHP 627,500</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+                <img src="images/GMT-Master II rootbeer.avif" alt="Everose">
+                <h3>GMT-Master II "Rootbeer"
+                    Oyster, 40 mm, Oystersteel and Everose gold
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126711CHNR </mark>
+                </h3>
+                <p>The Rolex GMT-Master II 126711CHNR, often called the "Root Beer," is a sophisticated and functional timepiece designed for world travelers, blending practicality with luxury. It combines the ability to track multiple time zones with the opulent appeal of Rolex's Everose gold and Oystersteel construction, creating a watch that's both a tool and a statement piece.</p>
+                <span class="price">PHP 1,157,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <img src="images/Rolex Deepsea.avif" alt="Deepsea rolex">
+                <h3>Rolex Deepsea
+                    Oyster, 44 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 136660 </mark>
+                </h3>
+                <p>The Rolex Deepsea is an ultra-resistant divers' watch engineered for extreme depths, continuing Rolex's legacy of watches designed for underwater exploration. Waterproof to an astounding 3,900 meters (12,800 feet), it features the patented Ringlock system and a helium escape valve, ensuring unwavering reliability in the most extreme underwater conditions. This timepiece is not merely a watch; it's a sophisticated instrument built to withstand the crushing pressures of the deep.</p>
+                <span class="price">PHP 936,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 13 -->
+            <div class="product-card">
+                <img src="images/Air-King.avif" alt="Air-King">
+                <h3>Air-King
+                    Oyster, 40 mm, Oystersteel
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126900 </mark>
+                </h3>
+                <p>The Rolex Air-King is an Oyster Perpetual watch that celebrates Rolex's deep-rooted connection to the world of aviation, paying homage to the pioneers of flight and the brand's role in early aviation history. Renowned for its distinctive and highly legible dial, robust Oystersteel construction, and superlative chronometric precision, the Air-King stands as a unique and functional timepiece within the Rolex collection.</p>
+                <span class="price">PHP 481,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 14 -->
+            <div class="product-card">
+                <img src="images/yatch master.avif" alt="ym watch">
+                <h3>Yacht-Master 42
+                    Oyster, 42 mm, white gold
+                    Reference <mark style="color: rgb(0, 0, 0);"> 226659 </mark>
+                </h3>
+                <p>The Rolex Yacht-Master 42 is a 42mm nautical watch blending sporty elegance with Rolex craftsmanship. It features a robust Oyster case (available in materials like white gold and RLX titanium), a bidirectional rotatable bezel with a Cerachrom insert for measuring intervals, a high-legibility dial, and an Oysterflex bracelet on some models. Powered by a Rolex-made self-winding movement, it offers precision and reliability for sailors and style enthusiasts alike.</p>
+                <span class="price">PHP 2,249,500</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 15 -->
+            <div class="product-card">
+                <img src="images/sky dweller.avif" alt="Sky dweller">
+                <h3>Sky-Dweller
+                    Oyster, 42 mm, Everose gold
+                    Reference <mark style="color: rgb(0, 0, 0);"> 336235 </mark>
+                </h3>
+                <p>The Rolex Sky-Dweller is a sophisticated watch designed for travelers, featuring an easy-to-use system for tracking two time zones and an annual calendar. Its key features include the Saros annual calendar (requiring only one adjustment per year), a Ring Command bezel for setting functions, an off-center 24-hour disc for reference time, and month indication via dial apertures. Housed in a robust Oyster case and powered by a Rolex-made movement, it blends functionality with luxury.</p>
+                <span class="price">PHP 3,004,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 16 -->
+            <div class="product-card">
+                <img src="images/land dweller.avif" alt="land dweller">
+                <h3>Land-Dweller 40
+                    Oyster, 40 mm, platinum
+                    Reference <mark style="color: rgb(0, 0, 0);"> 127336 </mark>
+                </h3>
+                <p>The "Land-Dweller 40" is a luxurious Rolex watch, likely intended as a high-end dress or daily wear piece, given its platinum construction. Its design, including a 40mm Oyster case, platinum material, fluted bezel, Jubilee bracelet, and date function, closely resembles a Rolex Datejust 40 in platinum. While "Land-Dweller" isn't a globally recognized Rolex model name, its high price is consistent with a platinum Rolex watch.</p>
+                <span class="price">PHP 4,038,000 </span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+
+            <!-- Product 17 -->
+            <div class="product-card">
+                <img src="images/cosmo everose.avif" alt=" cosmo everose">
+                <h3>Cosmograph Daytona
+                    Oyster, 40 mm, Everose gold and diamonds
+                    Reference <mark style="color: rgb(0, 0, 0);"> 126595TBR </mark>
+                </h3>
+                <p>This Rolex watch is a luxurious and highly coveted piece featuring a 40mm Oyster case in 18 ct Everose gold, Rolex's exclusive pink gold alloy. It's adorned with diamonds, typically on the bezel and/or dial, and likely paired with a President bracelet in matching Everose gold. Powered by a high-precision Superlative Chronometer movement, it represents the pinnacle of Rolex's craftsmanship, precious materials, and gem-setting artistry.</p>
+                <span class="price">PHP 9,064,000</span>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Regal Timepiece. All rights reserved.</p>
+        <p>Email: info@regaltimepiece.com | Phone: +63 923 324 5797</p>
+        <p>Follow us on <a href="#" style="color: #e67e22;">Instagram</a> and <a href="#" style="color: #e67e22;">Facebook</a></p>
